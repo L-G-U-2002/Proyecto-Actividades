@@ -60,7 +60,7 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultasToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(9, 118);
+            this.menuStrip1.Location = new System.Drawing.Point(1, 1);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(79, 24);
             this.menuStrip1.TabIndex = 0;

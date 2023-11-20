@@ -118,8 +118,8 @@ namespace Proyecto.formularios
             MessageBox.Show(lblCargo.Text);
             if (lblCargo.Text.Trim().ToUpper() == "EMPLE")
             {
-                
-                consultasToolStripMenuItem.Visible = false;
+
+                menuStrip1.Visible = false;
                 button1.Visible = false;
                 button6.Visible = false;
                 button5.Visible = false;
