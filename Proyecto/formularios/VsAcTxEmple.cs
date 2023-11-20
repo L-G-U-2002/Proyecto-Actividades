@@ -25,7 +25,16 @@ namespace Proyecto.formularios
         {
             InitializeComponent();
         }
-        
+
+        private void LLenarcomboboxES()
+        {
+            ClsActividades.LLenarcomboboxES();
+            cbestado.DataSource = ClsActividades.dt;
+            cbestado.DisplayMember = "nom_estado";
+            cbestado.ValueMember = "id_estado";
+            cbestado.Text = "Activado";
+        }
+
         public  void ListActividad(string ID)
         {
 
@@ -69,6 +78,7 @@ namespace Proyecto.formularios
             VistaAdmin LG = ((login)Application.OpenForms["login"]).InstanciaInicio;
             string ID = LG.label3.Text;
             ListActividad(ID);
+            LLenarcomboboxES();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -82,6 +92,25 @@ namespace Proyecto.formularios
             dataTable.Dispose();
             dataActiXemple.DataSource = null;
             
+        }
+
+        private void dataActiXemple_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lbltarea.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[3].Value.ToString();
+            lblproyecto.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[2].Value.ToString();
+            lblFechaI.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[6].Value.ToString();
+            lblFechaF.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[7].Value.ToString();
+            lblDescripcion.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[4].Value.ToString();
+        }
+
+        private void btnCerrar_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void lblCantidad_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
