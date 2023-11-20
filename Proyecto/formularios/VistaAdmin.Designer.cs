@@ -128,6 +128,7 @@
             this.button9.Text = "LISTA ACTIVIDADES";
             this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Visible = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
@@ -316,12 +317,13 @@
             this.lblCargo.BackColor = System.Drawing.Color.Transparent;
             this.lblCargo.Font = new System.Drawing.Font("Century", 10F);
             this.lblCargo.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblCargo.Location = new System.Drawing.Point(509, 1);
+            this.lblCargo.Location = new System.Drawing.Point(589, 9);
             this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(107, 121);
+            this.lblCargo.Size = new System.Drawing.Size(27, 22);
             this.lblCargo.TabIndex = 20;
             this.lblCargo.Text = "Cargo";
             this.lblCargo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCargo.Visible = false;
             // 
             // button10
             // 

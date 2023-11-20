@@ -116,18 +116,18 @@ namespace Proyecto.formularios
         private void VistaAdmin_Load(object sender, EventArgs e)
         {
             MessageBox.Show(lblCargo.Text);
-            if (lblCargo.Text.Trim().ToUpper() == "emple")
+            if (lblCargo.Text.Trim().ToUpper() == "EMPLE")
             {
-                button1.Enabled = false;
-                consultasToolStripMenuItem.Enabled = false;
-                button1.Enabled = false;
-                button6.Enabled = false;
-                button5.Enabled = false;
-                button3.Enabled= false;
-                button8.Enabled = false;
-                button7.Enabled = false;
-                button4.Enabled = false;
-                button2.Enabled = false;
+                
+                consultasToolStripMenuItem.Visible = false;
+                button1.Visible = false;
+                button6.Visible = false;
+                button5.Visible = false;
+                button3.Visible = false;
+                button8.Visible = false;
+                button7.Visible = false;
+                button4.Visible = false;
+                button2.Visible = false;
 
                 //--acceso
                 button9.Visible = true;
