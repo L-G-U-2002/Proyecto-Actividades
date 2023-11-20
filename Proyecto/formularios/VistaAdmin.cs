@@ -103,10 +103,15 @@ namespace Proyecto.formularios
 
         private void button10_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Seguro de cerrar Sesion?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            DialogResult rpt;
+            rpt = MessageBox.Show("Seguro de cerrar Sesion?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (rpt == DialogResult.Yes)
+            {
                 Close();
-            login lg = new login();
-            lg.Show();
+                login lg = new login();
+                lg.Show();
+            }
+                
         }
 
         private void VistaAdmin_FormClosing(object sender, FormClosingEventArgs e)
