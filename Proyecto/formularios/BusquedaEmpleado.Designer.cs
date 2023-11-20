@@ -52,6 +52,7 @@
             this.cbelegir.Size = new System.Drawing.Size(158, 21);
             this.cbelegir.TabIndex = 1;
             this.cbelegir.Text = "Seleccionar";
+            this.cbelegir.SelectedIndexChanged += new System.EventHandler(this.cbelegir_SelectedIndexChanged);
             // 
             // button2
             // 

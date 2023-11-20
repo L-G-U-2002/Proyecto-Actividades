@@ -46,6 +46,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataActiXemple = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataActiXemple)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +64,7 @@
             this.button1.TabIndex = 193;
             this.button1.Text = "ENVIAR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label10
             // 
@@ -239,12 +242,33 @@
             this.dataActiXemple.TabIndex = 176;
             this.dataActiXemple.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataActiXemple_CellDoubleClick);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(268, 436);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(24, 18);
+            this.label6.TabIndex = 194;
+            this.label6.Text = "ID";
+            // 
+            // lblID
+            // 
+            this.lblID.BackColor = System.Drawing.Color.White;
+            this.lblID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblID.Location = new System.Drawing.Point(298, 430);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(55, 24);
+            this.lblID.TabIndex = 195;
+            // 
             // VsAcTxEmple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(810, 504);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.cbestado);
@@ -295,5 +319,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataActiXemple;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblID;
     }
 }

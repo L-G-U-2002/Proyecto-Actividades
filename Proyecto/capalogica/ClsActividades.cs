@@ -34,6 +34,7 @@ namespace Proyecto.capalogica
 
             Cn.Close();
         }
+
         public static void InsertarActividades(MetodoActividades c)
         {
             Cn = new SqlConnection();
@@ -65,5 +66,55 @@ namespace Proyecto.capalogica
             Cn.Close();
         }
 
+        public static void EditarActividades(MetodoActividades c)
+        {
+            Cn = new SqlConnection();
+            Cn.ConnectionString = ClsConexion.cnCadena();
+            Cm = new SqlCommand();
+            Cm.Connection = Cn;
+            Cm.CommandText = "EditarActividades";
+            Cm.CommandType = CommandType.StoredProcedure;
+            Cm.Parameters.Add(new SqlParameter("@id", SqlDbType.VarChar));
+            Cm.Parameters["@id"].Value = c.id;
+            Cm.Parameters.Add(new SqlParameter("@id_estado", SqlDbType.VarChar));
+            Cm.Parameters["@id_estado"].Value = c.estado;
+            Cn.Open();
+            Cm.ExecuteNonQuery();
+            Cn.Close();
+        }
+
+        public static void ListarActividades()
+        {
+            Cn = new SqlConnection();
+            Cn.ConnectionString = ClsConexion.cnCadena();
+            Cn.Open();
+            da = new SqlDataAdapter();
+            da.SelectCommand = new SqlCommand();
+            da.SelectCommand.Connection = Cn;
+            da.SelectCommand.CommandText = "listar_actividades";
+
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            ds = new DataSet();
+            da.Fill(ds, "Cargar Actividades");
+
+            Cn.Close();
+        }
+
+        public static void ConsultarLista(MetodoActividades c)
+        {
+            Cn = new SqlConnection();
+            Cn.ConnectionString = ClsConexion.cnCadena();
+            Cn.Open();
+            da = new SqlDataAdapter();
+            da.SelectCommand = new SqlCommand();
+            da.SelectCommand.Connection = Cn;
+            da.SelectCommand.CommandText = "VConsultar_Actividad_Empleado";
+            da.SelectCommand.Parameters.AddWithValue("@actividad", c.actividad);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            ds = new DataSet();
+            da.Fill(ds, "Cargar Lista");
+
+            Cn.Close();
+        }
     }
 }

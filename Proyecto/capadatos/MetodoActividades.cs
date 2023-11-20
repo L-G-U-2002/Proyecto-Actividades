@@ -8,6 +8,8 @@ namespace Proyecto.capadatos
 {
     public class MetodoActividades
     {
+        public string actividad { get; set; }
+        public int id { get; set; }
         public string remitente { get; set; }
         public string id_empleado { get; set; }
         public string id_proyecto { get; set; }

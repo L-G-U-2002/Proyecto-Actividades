@@ -101,6 +101,7 @@ namespace Proyecto.formularios
             lblFechaI.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[6].Value.ToString();
             lblFechaF.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[7].Value.ToString();
             lblDescripcion.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[4].Value.ToString();
+            lblID.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[9].Value.ToString();
         }
 
         private void btnCerrar_Click_1(object sender, EventArgs e)
@@ -111,6 +112,23 @@ namespace Proyecto.formularios
         private void lblCantidad_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult Rpt;
+
+            Rpt = MessageBox.Show("¿Deseas informar esta actividad?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (Rpt == DialogResult.Yes)
+            {
+                MetodoActividades Gl = new MetodoActividades();
+                Gl.id= Convert.ToInt32(lblID.Text);
+                Gl.estado = Convert.ToInt32(cbestado.SelectedValue.ToString()); 
+                ClsActividades.EditarActividades(Gl);
+
+                MessageBox.Show("Se envió correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
     }
 }

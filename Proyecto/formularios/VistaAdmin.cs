@@ -44,7 +44,7 @@ namespace Proyecto.formularios
 
         private void button3_Click(object sender, EventArgs e)
         {
-            prueba devolver = new prueba();
+            ConsultarActividades devolver = new ConsultarActividades();
             // Mostrar el formulario y ocultar el primero
             devolver.Show();
             this.Hide();

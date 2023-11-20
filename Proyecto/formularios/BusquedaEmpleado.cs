@@ -63,5 +63,10 @@ namespace Proyecto.formularios
                 digitoEmpleados.DataMember = "Cargar Area de Empresa";
             }
         }
+
+        private void cbelegir_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -85,6 +85,12 @@
     <Compile Include="formularios\Cargo.Designer.cs">
       <DependentUpon>Cargo.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\ConsultarActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\ConsultarActividades.Designer.cs">
+      <DependentUpon>ConsultarActividades.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\listaEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\Cargo.resx">
       <DependentUpon>Cargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\ConsultarActividades.resx">
+      <DependentUpon>ConsultarActividades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\listaEmpleado.resx">
       <DependentUpon>listaEmpleado.cs</DependentUpon>
