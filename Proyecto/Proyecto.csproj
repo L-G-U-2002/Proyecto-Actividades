@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB2BA3E2-AD21-41A9-A12D-B8957D946ACA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Proyecto</RootNamespace>
+    <AssemblyName>Proyecto</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="capadatos\ClsConexion.cs" />
+    <Compile Include="capadatos\MetodoActividades.cs" />
+    <Compile Include="capadatos\MetodoAreaEmpresa.cs" />
+    <Compile Include="capadatos\MetodoCargo.cs" />
+    <Compile Include="capadatos\MetodoEmpleado.cs" />
+    <Compile Include="capadatos\MetodoProyecto.cs" />
+    <Compile Include="capadatos\MetodoTarea.cs" />
+    <Compile Include="capadatos\MetodoUsuario.cs" />
+    <Compile Include="capalogica\ClsActividades.cs" />
+    <Compile Include="capalogica\ClsAreaEmpresa.cs" />
+    <Compile Include="capalogica\ClsCargo.cs" />
+    <Compile Include="capalogica\ClsEmpleado.cs" />
+    <Compile Include="capalogica\ClsProyecto.cs" />
+    <Compile Include="capalogica\ClsTarea.cs" />
+    <Compile Include="capalogica\ClsUsuario.cs" />
+    <Compile Include="formularios\Actividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Actividades.Designer.cs">
+      <DependentUpon>Actividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\areaEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\areaEmpresa.Designer.cs">
+      <DependentUpon>areaEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\BusquedaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\BusquedaEmpleado.Designer.cs">
+      <DependentUpon>BusquedaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Cargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Cargo.Designer.cs">
+      <DependentUpon>Cargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\listaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\listaEmpleado.Designer.cs">
+      <DependentUpon>listaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\listatareas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\listatareas.Designer.cs">
+      <DependentUpon>listatareas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\loginEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\loginEmpleado.Designer.cs">
+      <DependentUpon>loginEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Proyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Proyecto.Designer.cs">
+      <DependentUpon>Proyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\prueba.Designer.cs">
+      <DependentUpon>prueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\VistaAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\VistaAdmin.Designer.cs">
+      <DependentUpon>VistaAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\VsAcTxEmple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\VsAcTxEmple.Designer.cs">
+      <DependentUpon>VsAcTxEmple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formularios\Actividades.resx">
+      <DependentUpon>Actividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\areaEmpresa.resx">
+      <DependentUpon>areaEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\BusquedaEmpleado.resx">
+      <DependentUpon>BusquedaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Cargo.resx">
+      <DependentUpon>Cargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\listaEmpleado.resx">
+      <DependentUpon>listaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\listatareas.resx">
+      <DependentUpon>listatareas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\loginEmpleado.resx">
+      <DependentUpon>loginEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Proyecto.resx">
+      <DependentUpon>Proyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\VistaAdmin.resx">
+      <DependentUpon>VistaAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\VsAcTxEmple.resx">
+      <DependentUpon>VsAcTxEmple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile_picture_user_icon_153075 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not-visible-interface-symbol-of-an-eye-with-a-slash-on-it_icon-icons.com_57783.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restart_back_left_arrow_6022.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3592856-general-group-office-personal-relation-team-team-structure_107770.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_application_addmale_useradd_insert_add_user_client_2312.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foldergreyactivities_92855.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\construction_project_plan_building_architect_design_develop-53_icon-icons.com_60217.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklist_pen_tab_list_tick_icon_188931.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carnetoutline_81049.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teamwork_icon_152111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\human_resources_search_employees_icon_187558.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
