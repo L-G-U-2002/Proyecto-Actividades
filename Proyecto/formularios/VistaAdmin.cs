@@ -103,15 +103,9 @@ namespace Proyecto.formularios
 
         private void button10_Click(object sender, EventArgs e)
         {
-            DialogResult rpt;
-            rpt = MessageBox.Show("Seguro de cerrar Sesion?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (rpt == DialogResult.Yes)
-            {
+            if (MessageBox.Show("Seguro de cerrar Sesion?", "aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 Close();
-                login lg = new login();
-                lg.Show();
-            }
-                
+
         }
 
         private void VistaAdmin_FormClosing(object sender, FormClosingEventArgs e)
@@ -122,18 +116,18 @@ namespace Proyecto.formularios
         private void VistaAdmin_Load(object sender, EventArgs e)
         {
             MessageBox.Show(lblCargo.Text);
-            if (lblCargo.Text.Trim().ToUpper() == "Admin")
+            if (lblCargo.Text.Trim().ToUpper() == "emple")
             {
-                button1.Visible = false;
-                consultasToolStripMenuItem.Visible = false;
-                button1.Visible = false;
-                button6.Visible = false;
-                button5.Visible = false;
-                button3.Visible = false;
-                button8.Visible = false;
-                button7.Visible = false;
-                button4.Visible = false;
-                button2.Visible = false;
+                button1.Enabled = false;
+                consultasToolStripMenuItem.Enabled = false;
+                button1.Enabled = false;
+                button6.Enabled = false;
+                button5.Enabled = false;
+                button3.Enabled= false;
+                button8.Enabled = false;
+                button7.Enabled = false;
+                button4.Enabled = false;
+                button2.Enabled = false;
 
                 //--acceso
                 button9.Visible = true;
