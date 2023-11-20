@@ -106,7 +106,7 @@ namespace Proyecto.formularios
 
         private void btnCerrar_Click_1(object sender, EventArgs e)
         {
-             Close();
+            Close();
         }
 
         private void lblCantidad_Click(object sender, EventArgs e)
