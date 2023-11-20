@@ -127,28 +127,31 @@
   <data name="not-visible-interface-symbol-of-an-eye-with-a-slash-on-it_icon-icons.com_57783" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\not-visible-interface-symbol-of-an-eye-with-a-slash-on-it_icon-icons.com_57783.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="business_application_addmale_useradd_insert_add_user_client_2312" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\business_application_addmale_useradd_insert_add_user_client_2312.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="human_resources_search_employees_icon_187558" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\human_resources_search_employees_icon_187558.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="restart_back_left_arrow_6022" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\restart_back_left_arrow_6022.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="foldergreyactivities_92855" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foldergreyactivities_92855.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="profile_picture_user_icon_153075 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\profile_picture_user_icon_153075 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="teamwork_icon_152111" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\teamwork_icon_152111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="checklist_pen_tab_list_tick_icon_188931" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\checklist_pen_tab_list_tick_icon_188931.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="restart_back_left_arrow_6022" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\restart_back_left_arrow_6022.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="profile_picture_user_icon_153075 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\profile_picture_user_icon_153075 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="foldergreyactivities_92855" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\foldergreyactivities_92855.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="business_application_addmale_useradd_insert_add_user_client_2312" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\business_application_addmale_useradd_insert_add_user_client_2312.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="carnetoutline_81049" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\carnetoutline_81049.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="human_resources_search_employees_icon_187558" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\human_resources_search_employees_icon_187558.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="close-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

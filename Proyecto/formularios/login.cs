@@ -34,7 +34,7 @@ namespace Proyecto.formularios
 
                 InstanciaInicio = new VistaAdmin();
                 InstanciaInicio.label3.Text = Datos.Rows[0][0].ToString();
-                InstanciaInicio.lblCargo.Text = Datos.Rows[0][2].ToString();
+                InstanciaInicio.lblCargo.Text = "CARGO: " + Datos.Rows[0][2].ToString();
                 InstanciaInicio.lblUsuario.Text = Datos.Rows[0][1].ToString();
                 if (Datos.Rows.Count > 0)
                 {
@@ -72,6 +72,11 @@ namespace Proyecto.formularios
                 // Ocultar el texto de la contraseña
                 txtclave.PasswordChar = '*';
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
