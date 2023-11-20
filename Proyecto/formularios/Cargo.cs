@@ -35,8 +35,9 @@ namespace Proyecto.formularios
         {
             VistaAdmin devolver = new VistaAdmin();
             // Mostrar el formulario y ocultar el primero
+            Close();
             devolver.Show();
-            this.Hide();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

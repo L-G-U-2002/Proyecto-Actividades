@@ -51,8 +51,9 @@ namespace Proyecto.formularios
         {
             VistaAdmin devolver = new VistaAdmin();
             // Mostrar el formulario y ocultar el primero
+            Close();
             devolver.Show();
-            this.Hide();
+          
         }
 
         private void txtbuscar_TextChanged(object sender, EventArgs e)
