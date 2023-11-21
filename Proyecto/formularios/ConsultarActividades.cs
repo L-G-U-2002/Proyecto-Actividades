@@ -76,7 +76,6 @@ namespace Proyecto.formularios
         private void button3_Click(object sender, EventArgs e)
         {
             string actividad = txtbuscar.Text;
-            
             RepActividades imprimir = new RepActividades();
             imprimir.actividad = actividad;
             imprimir.ShowDialog();
