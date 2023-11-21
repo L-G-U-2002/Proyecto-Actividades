@@ -76,7 +76,7 @@ namespace Proyecto.formularios
         private void button3_Click(object sender, EventArgs e)
         {
             string actividad = txtbuscar.Text;
-            MessageBox.Show("Valor de txtbuscar.Text: " + actividad);
+            
             RepActividades imprimir = new RepActividades();
             imprimir.actividad = actividad;
             imprimir.ShowDialog();
