@@ -78,6 +78,8 @@ namespace Proyecto.formularios
             MetodoActividades Gl = new MetodoActividades();
             Gl.actividad = txtbuscar.Text;
             ClsActividades.ConsultarLista(Gl);
+            digitoActividades.DataSource = ClsActividades.ds;
+            digitoActividades.DataMember = "Cargar Lista";
             RepActividades imprimir = new RepActividades();
             imprimir.actividades = Gl.actividad;
             imprimir.ShowDialog();
