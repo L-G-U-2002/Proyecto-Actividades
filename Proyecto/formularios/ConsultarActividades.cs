@@ -78,7 +78,7 @@ namespace Proyecto.formularios
             string actividad = txtbuscar.Text;
             MessageBox.Show("Valor de txtbuscar.Text: " + actividad);
             RepActividades imprimir = new RepActividades();
-            imprimir.actividades = actividad;
+            imprimir.actividad = actividad;
             imprimir.ShowDialog();
         }
     }
