@@ -19,10 +19,10 @@ namespace Proyecto.crystalReport
 
         private void RepActividades_Load(object sender, EventArgs e)
         {
-            CrystalReport1 = new CrystalReport1();
-            crystalReporActividades.ReportSource = reportes;
-            reportes.SetDatabaseLogon("sa", "71551457");
-            reportes.Refresh();
+            CrystalReport1 actividad = new CrystalReport1();
+            crystalReporActividades.ReportSource = actividad;
+            actividad.SetDatabaseLogon("sa", "71551457");
+            actividad.Refresh();
         }
     }
 }
