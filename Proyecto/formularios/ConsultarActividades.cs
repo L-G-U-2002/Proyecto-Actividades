@@ -1,5 +1,7 @@
-﻿using Proyecto.capadatos;
+﻿using CrystalDecisions.ReportAppServer;
+using Proyecto.capadatos;
 using Proyecto.capalogica;
+using Proyecto.crystalReport;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -69,6 +71,13 @@ namespace Proyecto.formularios
                 digitoActividades.DataSource = ClsActividades.ds;
                 digitoActividades.DataMember = "Cargar Lista";
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            RepActividades imprimir = new RepActividades();
+            imprimir.actividades = txtbuscar.Text;
+            imprimir.ShowDialog();
         }
     }
 }
