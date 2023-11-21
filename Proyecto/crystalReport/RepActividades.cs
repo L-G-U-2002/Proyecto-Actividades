@@ -16,14 +16,14 @@ namespace Proyecto.crystalReport
         {
             InitializeComponent();
         }
-        public string actividad { get; set; }
+        public string actividad;
         private void RepActividades_Load(object sender, EventArgs e)
         {
             CrystalReport1 actividades = new CrystalReport1();
             crystalReporActividades.ReportSource = actividades;
             actividades.SetParameterValue("@actividad", actividad);
             actividades.SetDatabaseLogon("sa", "71551457");
-            actividades.Refresh();
+            
         }
     }
 }
