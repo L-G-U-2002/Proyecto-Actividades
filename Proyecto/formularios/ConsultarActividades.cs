@@ -75,9 +75,11 @@ namespace Proyecto.formularios
         
         private void button3_Click(object sender, EventArgs e)
         {
-            string textoIngresado = txtbuscar.Text;
+            MetodoActividades Gl = new MetodoActividades();
+            Gl.actividad = txtbuscar.Text;
+            ClsActividades.ConsultarLista(Gl);
             RepActividades imprimir = new RepActividades();
-            imprimir.actividades = textoIngresado;
+            imprimir.actividades = Gl.actividad;
             imprimir.ShowDialog();
         }
     }
