@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace Proyecto.crystalReport
 {
-    public partial class RepBusquedaEmp : Form
+    public partial class RepActividades : Form
     {
-        public RepBusquedaEmp()
+        public RepActividades()
         {
             InitializeComponent();
         }
 
-        private void RepBusquedaEmp_Load(object sender, EventArgs e)
+        private void RepActividades_Load(object sender, EventArgs e)
         {
-            ReporteEmpleado reportes = new ReporteEmpleado();
-            crystalReportEmpleado.ReportSource = reportes;
+            CrystalReport1 = new CrystalReport1();
+            crystalReporActividades.ReportSource = reportes;
             reportes.SetDatabaseLogon("sa", "71551457");
             reportes.Refresh();
         }

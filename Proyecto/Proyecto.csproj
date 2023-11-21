@@ -67,6 +67,18 @@
     <Compile Include="capalogica\ClsProyecto.cs" />
     <Compile Include="capalogica\ClsTarea.cs" />
     <Compile Include="capalogica\ClsUsuario.cs" />
+    <Compile Include="crystalReport\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crystalReport\RepActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crystalReport\RepActividades.Designer.cs">
+      <DependentUpon>RepActividades.cs</DependentUpon>
+    </Compile>
     <Compile Include="crystalReport\RepBusquedaEmp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +171,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="crystalReport\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crystalReport\RepActividades.resx">
+      <DependentUpon>RepActividades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="crystalReport\RepBusquedaEmp.resx">
       <DependentUpon>RepBusquedaEmp.cs</DependentUpon>
     </EmbeddedResource>
