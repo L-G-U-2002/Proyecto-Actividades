@@ -74,9 +74,11 @@ namespace Proyecto.formularios
 
         private void button3_Click(object sender, EventArgs e)
         {
-            RepBusquedaEmp frmSecundario = new RepBusquedaEmp();
-            frmSecundario.MdiParent = this;
-            frmSecundario.Show();
+            // Crea una instancia del formulario de Crystal Reports
+            RepBusquedaEmp crystalForm = new RepBusquedaEmp();
+
+            // Abre el formulario de Crystal Reports
+            crystalForm.ShowDialog();
         }
     }
 }

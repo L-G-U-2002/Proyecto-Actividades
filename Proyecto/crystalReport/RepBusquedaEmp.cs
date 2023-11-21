@@ -21,7 +21,7 @@ namespace Proyecto.crystalReport
         {
             ReporteEmpleado reportes = new ReporteEmpleado();
             crystalReportEmpleado.ReportSource = reportes;
-            reportes.SetDatabaseLogon("sa", "71551457");
+            reportes.SetDatabaseLogon("sa", "020902");
             reportes.Refresh();
         }
     }
