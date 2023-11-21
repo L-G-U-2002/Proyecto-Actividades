@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,6 +67,18 @@
     <Compile Include="capalogica\ClsProyecto.cs" />
     <Compile Include="capalogica\ClsTarea.cs" />
     <Compile Include="capalogica\ClsUsuario.cs" />
+    <Compile Include="crystalReport\RepBusquedaEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crystalReport\RepBusquedaEmp.Designer.cs">
+      <DependentUpon>RepBusquedaEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="crystalReport\ReporteEmpleado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteEmpleado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="formularios\Actividades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +159,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="crystalReport\RepBusquedaEmp.resx">
+      <DependentUpon>RepBusquedaEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crystalReport\ReporteEmpleado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteEmpleado.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\Actividades.resx">
       <DependentUpon>Actividades.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +260,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

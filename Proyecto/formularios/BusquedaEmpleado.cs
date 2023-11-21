@@ -1,5 +1,7 @@
-﻿using Proyecto.capadatos;
+﻿using CrystalDecisions.ReportAppServer;
+using Proyecto.capadatos;
 using Proyecto.capalogica;
+using Proyecto.crystalReport;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -68,6 +70,13 @@ namespace Proyecto.formularios
         private void cbelegir_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            RepBusquedaEmp frmSecundario = new RepBusquedaEmp();
+            frmSecundario.MdiParent = this;
+            frmSecundario.Show();
         }
     }
 }
