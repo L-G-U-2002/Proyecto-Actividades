@@ -72,16 +72,13 @@ namespace Proyecto.formularios
                 digitoActividades.DataMember = "Cargar Lista";
             }
         }
-        
+       
         private void button3_Click(object sender, EventArgs e)
         {
-            MetodoActividades Gl = new MetodoActividades();
-            Gl.actividad = txtbuscar.Text;
-            ClsActividades.ConsultarLista(Gl);
-            digitoActividades.DataSource = ClsActividades.ds;
-            digitoActividades.DataMember = "Cargar Lista";
+            string actividad = txtbuscar.Text;
+            MessageBox.Show("Valor de txtbuscar.Text: " + actividad);
             RepActividades imprimir = new RepActividades();
-            imprimir.actividades = Gl.actividad;
+            imprimir.actividades = actividad;
             imprimir.ShowDialog();
         }
     }
