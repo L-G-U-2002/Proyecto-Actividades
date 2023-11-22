@@ -51,7 +51,17 @@ namespace Proyecto.formularios
             ds = new DataSet();
             da.Fill(ds, "Cargar Actividad");
             DataTable dataTable = ds.Tables["Cargar Actividad"];
+            if (dataTable.Rows.Count > 0)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    DateTime fechai = Convert.ToDateTime(row[7]);
+                    DateTime fehaf = Convert.ToDateTime(row[8]);
+                    int id = Convert.ToInt32(row[0]);
 
+                    ValidarFecha(id, fechai, fehaf);
+                }
+            }
             dataActiXemple.DataSource = dataTable;
             Cn.Close();
         }
@@ -82,17 +92,8 @@ namespace Proyecto.formularios
             {
                 LimpiarDataActiXemple();
             }
-            else 
-            {
-                foreach (DataRow row in dataTable.Rows)
-                {
-                    DateTime fechai = Convert.ToDateTime(row[7]);
-                    DateTime fehaf = Convert.ToDateTime(row[8]);
-                    int id = Convert.ToInt32(row[0]);
-
-                    ValidarFecha(id, fechai, fehaf);
-                }
-            }
+           
+            
             VistaAdmin LG = ((login)Application.OpenForms["login"]).InstanciaInicio;
             string ID = LG.label3.Text;
             
