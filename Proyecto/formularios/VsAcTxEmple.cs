@@ -61,7 +61,7 @@ namespace Proyecto.formularios
                    // string fechai = row[6].ToString();
                    // string fehaf = row[7].ToString();
                     int id = Convert.ToInt32(row[9].ToString());
-                    ValidarFecha(id,);
+                    ValidarFecha(id);
                 }
             }
         }
