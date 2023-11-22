@@ -116,5 +116,24 @@ namespace Proyecto.capalogica
 
             Cn.Close();
         }
+
+        public static void ValidarFecha(MetodoActividades c)
+        {
+            Cn = new SqlConnection();
+            Cn.ConnectionString = ClsConexion.cnCadena();
+            Cm = new SqlCommand();
+            Cm.Connection = Cn;
+            Cm.CommandText = "ValidarFecha";
+            Cm.CommandType = CommandType.StoredProcedure;
+            Cm.Parameters.Add(new SqlParameter("@IdRegistro", SqlDbType.VarChar));
+            Cm.Parameters["@IdRegistro"].Value = c.id;
+            Cm.Parameters.Add(new SqlParameter("@FechaInicio", SqlDbType.Date));
+            Cm.Parameters["@FechaInicio"].Value = c.fecha_inicio;
+            Cm.Parameters.Add(new SqlParameter("@FechaFin", SqlDbType.Date));
+            Cm.Parameters["@FechaFin"].Value = c.fecha_fin;
+            Cn.Open();
+            Cm.ExecuteNonQuery();
+            Cn.Close();
+        }
     }
 }
