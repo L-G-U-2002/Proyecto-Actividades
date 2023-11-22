@@ -58,12 +58,18 @@ namespace Proyecto.formularios
             {
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    if (DateTime.TryParse(row[6].ToString(), out DateTime fechai) &&
-    DateTime.TryParse(row[7].ToString(), out DateTime fehaf))
+                    if (DateTime.TryParse(row[6].ToString(), out DateTime fechai) && DateTime.TryParse(row[7].ToString(), out DateTime fehaf))
                     {
                         // Las conversiones fueron exitosas, ahora puedes usar fechai y fehaf
-                        int id = Convert.ToInt32(row[0]);
-                        ValidarFecha(id, fechai, fehaf);
+                        if (int.TryParse(row[0].ToString(), out int id))
+                        {
+                            ValidarFecha(id, fechai, fehaf);
+                        }
+                        else
+                        {
+                            // Manejar el caso en el que row[0] no sea un número válido
+                           MessageBox.Show("invalido", "Mañana", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        }
                     }
                 }
             }
