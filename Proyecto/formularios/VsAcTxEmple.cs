@@ -57,7 +57,7 @@ namespace Proyecto.formularios
                 {
                     string fechai = dataTable.Columns[6].ToString();
                     string fehaf = dataTable.Columns[7].ToString();
-                    int id = Convert.ToInt32(dataTable.Columns[9].ToString());
+                    int id = Convert.ToInt32(dataTable.Rows[0].ToString());
 
                     ValidarFecha(id, fechai, fehaf);
                 }
