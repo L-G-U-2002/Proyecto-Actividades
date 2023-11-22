@@ -147,14 +147,25 @@ namespace Proyecto.formularios
             Rpt = MessageBox.Show("¿Deseas informar esta actividad?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (Rpt == DialogResult.Yes)
             {
-                MetodoActividades Gl = new MetodoActividades();
-                Gl.id= Convert.ToInt32(lblID.Text);
-                Gl.estado = Convert.ToInt32(cbestado.SelectedValue.ToString()); 
-                ClsActividades.EditarActividades(Gl);
-                VsAcTxEmple_Load(sender, e);
-                MessageBox.Show("Se envió correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (cbestado.Text.Trim().ToUpper() == "NO TERMINADO") 
+                {
+                    
+                    MessageBox.Show("IMPOSIBLE EDITAR PASO LA FECHA LIMITE", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+                else
+                {
+                    MetodoActividades Gl = new MetodoActividades();
+                    Gl.id = Convert.ToInt32(lblID.Text);
+                    Gl.estado = Convert.ToInt32(cbestado.SelectedValue.ToString());
+                    ClsActividades.EditarActividades(Gl);
+                    VsAcTxEmple_Load(sender, e);
+                    MessageBox.Show("Se envió correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
 
             }
+
         }
     }
 }
