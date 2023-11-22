@@ -77,10 +77,21 @@ namespace Proyecto.formularios
         {
 
             DataTable dataTable = (DataTable)dataActiXemple.DataSource;
-            
+
             if (dataTable != null)
             {
                 LimpiarDataActiXemple();
+            }
+            else 
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    DateTime fechai = Convert.ToDateTime(row[7]);
+                    DateTime fehaf = Convert.ToDateTime(row[8]);
+                    int id = Convert.ToInt32(row[0]);
+
+                    ValidarFecha(id, fechai, fehaf);
+                }
             }
             VistaAdmin LG = ((login)Application.OpenForms["login"]).InstanciaInicio;
             string ID = LG.label3.Text;
@@ -88,14 +99,8 @@ namespace Proyecto.formularios
             ListActividad(ID);
             lblCantidad.Text = "TOTAL DE ACTIVIDADES " + dataActiXemple.Rows.Count;
             LLenarcomboboxES();
-            foreach (DataRow row in dataTable.Rows)
-            {
-                DateTime fechai = Convert.ToDateTime(row[7]);
-                DateTime fehaf = Convert.ToDateTime(row[8]);
-                int id = Convert.ToInt32(row[0]);
-
-                ValidarFecha(id, fechai, fehaf);
-            }
+            
+            
         }
         public void LimpiarDataActiXemple()
         {
