@@ -86,23 +86,8 @@ namespace Proyecto.formularios
 
         private void VsAcTxEmple_Load(object sender, EventArgs e)
         {
-            if (cbestado.Text.Trim().ToUpper() == "NO TERMINADO")
-            {
+            
 
-                menuStrip1.Visible = false;
-                button1.Visible = false;
-                button6.Visible = false;
-                button5.Visible = false;
-                button3.Visible = false;
-                button8.Visible = false;
-                button7.Visible = false;
-                button4.Visible = false;
-                button2.Visible = false;
-
-                //--acceso
-                button9.Visible = true;
-
-            }
             DataTable dataTable = (DataTable)dataActiXemple.DataSource;
 
             if (dataTable != null)
@@ -117,8 +102,11 @@ namespace Proyecto.formularios
             ListActividad(ID);
             lblCantidad.Text = "TOTAL DE ACTIVIDADES " + dataActiXemple.Rows.Count;
             LLenarcomboboxES();
-            
-            
+            if (cbestado.Text.Trim().ToUpper() == "NO TERMINADO")
+            {
+                cbestado.Enabled = false;
+            }
+
         }
         public void LimpiarDataActiXemple()
         {
