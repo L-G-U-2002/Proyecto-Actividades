@@ -94,11 +94,6 @@ namespace Proyecto.formularios
             lblCantidad.Text = "TOTAL DE ACTIVIDADES " + dataActiXemple.Rows.Count;
             LLenarcomboboxES();
         }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-          Close();
-        }
         public void LimpiarDataActiXemple()
         {
             DataTable dataTable = (DataTable)dataActiXemple.DataSource;
