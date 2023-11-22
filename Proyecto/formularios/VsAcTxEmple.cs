@@ -53,11 +53,11 @@ namespace Proyecto.formularios
             DataTable dataTable = ds.Tables["Cargar Actividad"];
             if (dataTable.Rows.Count > 0)
             {
-                foreach (DataRow row in dataTable.Rows)
+                foreach (DataRow row in dataTable.Columns)
                 {
-                    string fechai = dataTable.Rows[7].ToString();
-                    string fehaf = dataTable.Rows[8].ToString();
-                    int id = Convert.ToInt32(dataTable.Rows[0].ToString());
+                    string fechai = dataTable.Columns[7].ToString();
+                    string fehaf = dataTable.Columns[8].ToString();
+                    int id = Convert.ToInt32(dataTable.Columns[0].ToString());
 
                     ValidarFecha(id, fechai, fehaf);
                 }
