@@ -17,7 +17,7 @@ namespace Proyecto.formularios
     public partial class VsAcTxEmple : Form
     {
         public static SqlConnection Cn;
-
+        public static SqlCommand Cm;
         public static SqlDataAdapter da;
         public static DataSet ds;
         public static DataTable dt;
@@ -56,27 +56,40 @@ namespace Proyecto.formularios
             Cn.Close();
         }
 
-        private void btnbuscar_Click(object sender, EventArgs e)
+        public static void ValidarFecha(int id, string Fi,string Ff )
         {
-           
-
-            
-        }
-
-        private void txtbuscID_TextChanged(object sender, EventArgs e)
-        {
-
+            Cn = new SqlConnection();
+            Cn.ConnectionString = ClsConexion.cnCadena();
+            Cm = new SqlCommand();
+            Cm.Connection = Cn;
+            Cm.CommandText = "ValidarFecha";
+            Cm.CommandType = CommandType.StoredProcedure;
+            Cm.Parameters.Add(new SqlParameter("@IdRegistro", SqlDbType.VarChar));
+            Cm.Parameters["@IdRegistro"].Value = id;
+            Cm.Parameters.Add(new SqlParameter("@FechaInicio", SqlDbType.Date));
+            Cm.Parameters["@FechaInicio"].Value = Fi;
+            Cm.Parameters.Add(new SqlParameter("@FechaFin", SqlDbType.Date));
+            Cm.Parameters["@FechaFin"].Value = Ff;
+            Cn.Open();
+            Cm.ExecuteNonQuery();
+            Cn.Close();
         }
 
         private void VsAcTxEmple_Load(object sender, EventArgs e)
         {
+
             DataTable dataTable = (DataTable)dataActiXemple.DataSource;
+             string fechai = dataTable.Columns[7].ToString();
+            string fehaf = dataTable.Columns[8].ToString();
+            int id = Convert.ToInt32(dataTable.Columns[0].ToString());
+            ValidarFecha(id,fechai,fehaf);
             if (dataTable != null)
             {
                 LimpiarDataActiXemple();
             }
             VistaAdmin LG = ((login)Application.OpenForms["login"]).InstanciaInicio;
             string ID = LG.label3.Text;
+            ValidarFecha(id,fechai,fehaf);
             ListActividad(ID);
             lblCantidad.Text = "TOTAL DE ACTIVIDADES " + dataActiXemple.Rows.Count;
             LLenarcomboboxES();
@@ -97,6 +110,7 @@ namespace Proyecto.formularios
 
         private void dataActiXemple_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+           
             lbltarea.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[3].Value.ToString();
             lblproyecto.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[2].Value.ToString();
             lblFechaI.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[6].Value.ToString();
