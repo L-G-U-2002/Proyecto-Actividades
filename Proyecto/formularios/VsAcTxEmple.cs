@@ -53,7 +53,7 @@ namespace Proyecto.formularios
             DataTable dataTable = ds.Tables["Cargar Actividad"];
             if (dataTable.Rows.Count > 0)
             {
-                foreach (DataRow row in dataTable.Columns)
+                foreach (DataColumn row in dataTable.Columns)
                 {
                     string fechai = dataTable.Columns[7].ToString();
                     string fehaf = dataTable.Columns[8].ToString();
