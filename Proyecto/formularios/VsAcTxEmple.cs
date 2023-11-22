@@ -102,10 +102,7 @@ namespace Proyecto.formularios
             ListActividad(ID);
             lblCantidad.Text = "TOTAL DE ACTIVIDADES " + dataActiXemple.Rows.Count;
             LLenarcomboboxES();
-            if (cbestado.Text.Trim().ToUpper() == "NO TERMINADO")
-            {
-                cbestado.Enabled = false;
-            }
+            
 
         }
         public void LimpiarDataActiXemple()
@@ -127,6 +124,10 @@ namespace Proyecto.formularios
             lblDescripcion.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[4].Value.ToString();
             cbestado.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[5].Value.ToString();
             lblID.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[9].Value.ToString();
+            if (cbestado.Text.Trim().ToUpper() == "NO TERMINADO")
+            {
+                cbestado.Enabled = false;
+            }
         }
 
         private void btnCerrar_Click_1(object sender, EventArgs e)
