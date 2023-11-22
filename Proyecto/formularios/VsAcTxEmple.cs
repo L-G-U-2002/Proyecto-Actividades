@@ -126,7 +126,7 @@ namespace Proyecto.formularios
                 Gl.id= Convert.ToInt32(lblID.Text);
                 Gl.estado = Convert.ToInt32(cbestado.SelectedValue.ToString()); 
                 ClsActividades.EditarActividades(Gl);
-
+                VsAcTxEmple_Load(sender, e);
                 MessageBox.Show("Se envió correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }

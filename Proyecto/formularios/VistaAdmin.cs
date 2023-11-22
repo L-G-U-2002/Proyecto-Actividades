@@ -115,7 +115,7 @@ namespace Proyecto.formularios
 
         private void VistaAdmin_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(lblCargo.Text);
+            
             if (lblCargo.Text.Trim().ToUpper() == "EMPLEADO")
             {
 

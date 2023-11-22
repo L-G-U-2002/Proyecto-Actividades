@@ -43,7 +43,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.lblCantidad = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataActiXemple = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
@@ -206,16 +205,6 @@
             this.lblCantidad.Text = "TOTAL DE ACTIVIDADES 0";
             this.lblCantidad.Click += new System.EventHandler(this.lblCantidad_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(116, 107);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
-            this.label2.TabIndex = 178;
-            this.label2.Text = "BUSCAR ID :";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -284,7 +273,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.lblCantidad);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataActiXemple);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -316,7 +304,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Label lblCantidad;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataActiXemple;
         private System.Windows.Forms.Label label6;
