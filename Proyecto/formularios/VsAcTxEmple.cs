@@ -56,7 +56,7 @@ namespace Proyecto.formularios
             Cn.Close();
         }
 
-        public static void ValidarFecha(int id, string Fi,string Ff )
+        public static void ValidarFecha(int id, DateTime Fi, DateTime Ff )
         {
             Cn = new SqlConnection();
             Cn.ConnectionString = ClsConexion.cnCadena();
@@ -64,12 +64,10 @@ namespace Proyecto.formularios
             Cm.Connection = Cn;
             Cm.CommandText = "ValidarFecha";
             Cm.CommandType = CommandType.StoredProcedure;
-            Cm.Parameters.Add(new SqlParameter("@IdRegistro", SqlDbType.VarChar));
-            Cm.Parameters["@IdRegistro"].Value = id;
-            Cm.Parameters.Add(new SqlParameter("@FechaInicio", SqlDbType.Date));
-            Cm.Parameters["@FechaInicio"].Value = Fi;
-            Cm.Parameters.Add(new SqlParameter("@FechaFin", SqlDbType.Date));
-            Cm.Parameters["@FechaFin"].Value = Ff;
+            Cm.Parameters.AddWithValue("@IdRegistro", id).SqlDbType = SqlDbType.Int;
+            Cm.Parameters.AddWithValue("@FechaInicio", Fi).SqlDbType = SqlDbType.Date;
+            Cm.Parameters.AddWithValue("@FechaFin", Ff).SqlDbType = SqlDbType.Date;
+
             Cn.Open();
             Cm.ExecuteNonQuery();
             Cn.Close();
@@ -79,10 +77,7 @@ namespace Proyecto.formularios
         {
 
             DataTable dataTable = (DataTable)dataActiXemple.DataSource;
-             string fechai = dataTable.Columns[7].ToString();
-            string fehaf = dataTable.Columns[8].ToString();
-            int id = Convert.ToInt32(dataTable.Columns[0].ToString());
-            ValidarFecha(id,fechai,fehaf);
+            
             if (dataTable != null)
             {
                 LimpiarDataActiXemple();
@@ -93,6 +88,14 @@ namespace Proyecto.formularios
             ListActividad(ID);
             lblCantidad.Text = "TOTAL DE ACTIVIDADES " + dataActiXemple.Rows.Count;
             LLenarcomboboxES();
+            foreach (DataRow row in dataTable.Rows)
+            {
+                DateTime fechai = Convert.ToDateTime(row[7]);
+                DateTime fehaf = Convert.ToDateTime(row[8]);
+                int id = Convert.ToInt32(row[0]);
+
+                ValidarFecha(id, fechai, fehaf);
+            }
         }
         public void LimpiarDataActiXemple()
         {
