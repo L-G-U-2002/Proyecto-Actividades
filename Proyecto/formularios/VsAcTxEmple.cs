@@ -86,7 +86,23 @@ namespace Proyecto.formularios
 
         private void VsAcTxEmple_Load(object sender, EventArgs e)
         {
+            if (cbestado.Text.Trim().ToUpper() == "NO TERMINADO")
+            {
 
+                menuStrip1.Visible = false;
+                button1.Visible = false;
+                button6.Visible = false;
+                button5.Visible = false;
+                button3.Visible = false;
+                button8.Visible = false;
+                button7.Visible = false;
+                button4.Visible = false;
+                button2.Visible = false;
+
+                //--acceso
+                button9.Visible = true;
+
+            }
             DataTable dataTable = (DataTable)dataActiXemple.DataSource;
 
             if (dataTable != null)
@@ -121,6 +137,7 @@ namespace Proyecto.formularios
             lblFechaI.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[6].Value.ToString();
             lblFechaF.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[7].Value.ToString();
             lblDescripcion.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[4].Value.ToString();
+            cbestado.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[5].Value.ToString();
             lblID.Text = this.dataActiXemple.Rows[e.RowIndex].Cells[9].Value.ToString();
         }
 
