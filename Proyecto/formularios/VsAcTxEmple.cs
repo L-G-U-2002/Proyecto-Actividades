@@ -139,16 +139,15 @@ namespace Proyecto.formularios
             {
                 cbestado.Enabled = false;
             }
+            else if (cbestado.Text.Trim().ToUpper() == "TERMINADO")
+            {
+                cbestado.Enabled = false;
+            }
         }
 
         private void btnCerrar_Click_1(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void lblCantidad_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -164,12 +163,12 @@ namespace Proyecto.formularios
                     MessageBox.Show("IMPOSIBLE ENVIAR PASO LA FECHA LIMITE", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
-                //else if (cbestado.Text.Trim().ToUpper() == "TERMINADO")
-                //{
+                else if (cbestado.Text.Trim().ToUpper() == "TERMINADO")
+                {
 
-                //  MessageBox.Show("NO SE PUEDE ENVIAR OTRA VEZ LA INFORMACION DE LA ACTIVIDAD", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                  MessageBox.Show("NO SE PUEDE ENVIAR OTRA VEZ LA INFORMACION DE LA ACTIVIDAD", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                //}
+                }
                 else
                 {
                     MetodoActividades Gl = new MetodoActividades();

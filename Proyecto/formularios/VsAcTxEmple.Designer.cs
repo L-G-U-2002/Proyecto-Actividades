@@ -203,7 +203,6 @@
             this.lblCantidad.Size = new System.Drawing.Size(143, 13);
             this.lblCantidad.TabIndex = 179;
             this.lblCantidad.Text = "TOTAL DE ACTIVIDADES 0";
-            this.lblCantidad.Click += new System.EventHandler(this.lblCantidad_Click);
             // 
             // label1
             // 
