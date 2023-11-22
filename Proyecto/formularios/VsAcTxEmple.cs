@@ -51,20 +51,22 @@ namespace Proyecto.formularios
             ds = new DataSet();
             da.Fill(ds, "Cargar Actividad");
             DataTable dataTable = ds.Tables["Cargar Actividad"];
+            
+            dataActiXemple.DataSource = dataTable;
+            Cn.Close();
             if (dataTable.Rows.Count > 0)
             {
-                foreach (DataColumn Columns in dataTable.Columns)
+                foreach (DataRow row in dataTable.Rows)
                 {
-                    string fechai = dataTable.Columns[6].ToString();
-                    string fehaf = dataTable.Columns[7].ToString();
-                    int id = Convert.ToInt32(dataTable.Rows[0].ToString());
+                    string fechai = row[6].ToString();  // Asumiendo que la fecha de inicio está en la columna 6
+                    string fehaf = row[7].ToString();  // Asumiendo que la fecha de fin está en la columna 7
+                    int id = Convert.ToInt32(row[0]);   // Asumiendo que el ID está en la columna 0
 
                     ValidarFecha(id, fechai, fehaf);
                 }
             }
-            dataActiXemple.DataSource = dataTable;
-            Cn.Close();
         }
+
 
         public static void ValidarFecha(int id, string Fi, string Ff )
         {
