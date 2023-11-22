@@ -60,7 +60,7 @@ namespace Proyecto.formularios
         {
            
 
-            lblCantidad.Text = "TOTAL DE ACTIVIDADES " + dataActiXemple.Rows.Count;
+            
         }
 
         private void txtbuscID_TextChanged(object sender, EventArgs e)
@@ -78,6 +78,7 @@ namespace Proyecto.formularios
             VistaAdmin LG = ((login)Application.OpenForms["login"]).InstanciaInicio;
             string ID = LG.label3.Text;
             ListActividad(ID);
+            lblCantidad.Text = "TOTAL DE ACTIVIDADES " + dataActiXemple.Rows.Count;
             LLenarcomboboxES();
         }
 

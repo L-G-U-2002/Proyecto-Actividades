@@ -10,7 +10,7 @@ namespace Proyecto.capadatos
     {
         public static String cnCadena()
         {
-            String Str = "SERVER=DESKTOP-KDLM7F6;DataBase=EMPRESA;UID=sa;PWD=71551457";
+            String Str = "SERVER=GUTIERREZ;DataBase=EMPRESARANSES;UID=sa;PWD=020902";
             return Str;
         }
     }
