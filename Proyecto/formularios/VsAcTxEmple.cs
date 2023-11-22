@@ -61,7 +61,7 @@ namespace Proyecto.formularios
                     if (DateTime.TryParse(row[6].ToString(), out DateTime fechai) && DateTime.TryParse(row[7].ToString(), out DateTime fehaf))
                     {
                         // Las conversiones fueron exitosas, ahora puedes usar fechai y fehaf
-                        if (int.TryParse(row[0].ToString(), out int id))
+                        if (int.TryParse(row[9].ToString(), out int id))
                         {
                             ValidarFecha(id, fechai, fehaf);
                         }
@@ -69,6 +69,7 @@ namespace Proyecto.formularios
                         {
                             // Manejar el caso en el que row[0] no sea un número válido
                            MessageBox.Show("invalido", "Mañana", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                           
                         }
                     }
                 }
