@@ -32,7 +32,7 @@ namespace Proyecto.formularios
             cbestado.DataSource = ClsActividades.dt;
             cbestado.DisplayMember = "nom_estado";
             cbestado.ValueMember = "id_estado";
-            cbestado.Text = "Activado";
+            cbestado.Text = "Elegir";
         }
 
         public  void ListActividad(string ID)
