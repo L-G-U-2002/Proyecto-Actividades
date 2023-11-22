@@ -26,6 +26,17 @@ namespace Proyecto.formularios
             InitializeComponent();
         }
 
+        public void limpiar()
+        {
+            lbltarea.Text=string.Empty;
+            lblproyecto.Text = string.Empty;
+            lblFechaI.Text = string.Empty;
+            lblFechaF.Text = string.Empty;
+            lblDescripcion.Text = string.Empty;
+            lblID.Text = string.Empty;
+            cbestado.Text = "Elegir";
+            cbestado.Enabled = true;
+        }
         private void LLenarcomboboxES()
         {
             ClsActividades.LLenarcomboboxES();
@@ -150,7 +161,7 @@ namespace Proyecto.formularios
                 if (cbestado.Text.Trim().ToUpper() == "NO TERMINADO") 
                 {
                     
-                    MessageBox.Show("IMPOSIBLE EDITAR PASO LA FECHA LIMITE", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("IMPOSIBLE ENVIAR PASO LA FECHA LIMITE", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
                 else
@@ -163,7 +174,7 @@ namespace Proyecto.formularios
                     MessageBox.Show("Se envió correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
-
+                limpiar();
             }
 
         }
