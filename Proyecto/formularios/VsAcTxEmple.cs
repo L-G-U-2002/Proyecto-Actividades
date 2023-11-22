@@ -58,16 +58,16 @@ namespace Proyecto.formularios
             {
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    string fechai = row[6].ToString();
-                    string fehaf = row[7].ToString();
+                   // string fechai = row[6].ToString();
+                   // string fehaf = row[7].ToString();
                     int id = Convert.ToInt32(row[9].ToString());
-                    ValidarFecha(id, fechai, fehaf);
+                    ValidarFecha(id,);
                 }
             }
         }
 
 
-        public static void ValidarFecha(int id, string Fi, string Ff )
+        public static void ValidarFecha(int id)
         {
             Cn = new SqlConnection();
             Cn.ConnectionString = ClsConexion.cnCadena();
@@ -76,8 +76,8 @@ namespace Proyecto.formularios
             Cm.CommandText = "ValidarFecha";
             Cm.CommandType = CommandType.StoredProcedure;
             Cm.Parameters.AddWithValue("@IdRegistro", id).SqlDbType = SqlDbType.Int;
-            Cm.Parameters.AddWithValue("@FechaInicio", Fi).SqlDbType = SqlDbType.Date;
-            Cm.Parameters.AddWithValue("@FechaFin", Ff).SqlDbType = SqlDbType.Date;
+           //Cm.Parameters.AddWithValue("@FechaInicio", Fi).SqlDbType = SqlDbType.Date;
+           // Cm.Parameters.AddWithValue("@FechaFin", Ff).SqlDbType = SqlDbType.Date;
 
             Cn.Open();
             Cm.ExecuteNonQuery();
