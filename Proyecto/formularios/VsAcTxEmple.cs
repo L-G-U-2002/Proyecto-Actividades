@@ -55,9 +55,9 @@ namespace Proyecto.formularios
             {
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    DateTime fechai = Convert.ToDateTime(row[7]);
-                    DateTime fehaf = Convert.ToDateTime(row[8]);
-                    int id = Convert.ToInt32(row[0]);
+                    string fechai = dataTable.Rows[7].ToString();
+                    string fehaf = dataTable.Rows[8].ToString();
+                    int id = Convert.ToInt32(dataTable.Rows[0].ToString());
 
                     ValidarFecha(id, fechai, fehaf);
                 }
@@ -66,7 +66,7 @@ namespace Proyecto.formularios
             Cn.Close();
         }
 
-        public static void ValidarFecha(int id, DateTime Fi, DateTime Ff )
+        public static void ValidarFecha(int id, string Fi, string Ff )
         {
             Cn = new SqlConnection();
             Cn.ConnectionString = ClsConexion.cnCadena();
