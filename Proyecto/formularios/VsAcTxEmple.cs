@@ -143,6 +143,10 @@ namespace Proyecto.formularios
             {
                 cbestado.Enabled = false;
             }
+            else 
+            {
+                cbestado.Enabled = true;
+            }
         }
 
         private void btnCerrar_Click_1(object sender, EventArgs e)
