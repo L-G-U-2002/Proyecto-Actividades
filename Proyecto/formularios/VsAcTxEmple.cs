@@ -143,7 +143,7 @@ namespace Proyecto.formularios
             {
                 cbestado.Enabled = false;
             }
-            else 
+            else  
             {
                 cbestado.Enabled = true;
             }
