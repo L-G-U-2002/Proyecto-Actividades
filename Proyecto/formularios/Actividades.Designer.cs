@@ -107,6 +107,7 @@
             this.cbestado.Size = new System.Drawing.Size(133, 21);
             this.cbestado.TabIndex = 33;
             this.cbestado.Text = "Activo";
+            this.cbestado.Visible = false;
             // 
             // cbremitente
             // 
